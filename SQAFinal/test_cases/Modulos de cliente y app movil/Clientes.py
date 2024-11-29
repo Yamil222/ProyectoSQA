@@ -7,7 +7,7 @@ import time
 
 class TestFormulario:
     def setup_method(self):
-        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+        self.driver = webdriver.Chrome()
         self.driver.maximize_window()
         self.driver.get("https://vicent42.com/sistemas/ProyectoRM2/") 
         time.sleep(2)

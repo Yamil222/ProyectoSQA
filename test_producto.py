@@ -12,7 +12,7 @@ class TestCliente:
         self.driver.quit()
         time.sleep(5)
         print("Prueba visual completada")
-    def test_registrar_cliente(self):
+    def test_registrar_Producto(self):
         # Iniciar sesión
         self.driver.find_element(By.XPATH, "//input[@id='usuario']").send_keys("admin")
         time.sleep(1)

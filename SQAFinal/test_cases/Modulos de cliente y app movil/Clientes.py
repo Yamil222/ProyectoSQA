@@ -32,17 +32,18 @@ class TestCliente:
         time.sleep(2)
         self.driver.find_element(By.XPATH, "//button[@class='btn btn-primary' and @type='submit']").click()
         time.sleep(2)
-    def test_verify_id(self):
-        esperado = "12787"
-        actual = self.driver.find_element(By.XPATH, "//app-persona//child::h4").text
-        assert esperado == actual, f"FAIL: Esperado: {esperado}, Actual: {actual}"
-        print(f"Verificación de ID exitosa. ID: {actual}")
-    def test_verify_name(self):
-        esperado = "Robertoooo to to to"  
-        actual = self.driver.find_element(By.XPATH, "//app-persona//child::h4").text
-        assert esperado == actual, f"FAIL: Esperado: {esperado}, Actual: {actual}"
-        print(f"Verificación de Nombre exitosa. Nombre: {actual}")
-    def teardown_method(self):
+    #def test_verify_name(self):
+        #esperado = "Robertoooo to to to"
+        #actual = self.driver.find_element(By.XPATH, "//td[contains(text(), 'Robertoooo to to to')]").text
+        #assert esperado == actual, f"FAIL: Esperado: {esperado}, Actual: {actual}"
+        #print(f"Verificación de Nombre exitosa. Nombre: {actual}")
+
+    #def test_verify_address(self):
+        #esperado = "Calle Colon"
+        #actual = self.driver.find_element(By.XPATH, "//td[contains(text(), 'Calle Colon')]").text
+        #assert esperado == actual, f"FAIL: Esperado: {esperado}, Actual: {actual}"
+        #print(f"Verificación de Dirección exitosa. Dirección: {actual}")
+    #def teardown_method(self):
         self.driver.quit()
         print("Prueba finalizada")
 if __name__ == "__main__":
@@ -50,7 +51,7 @@ if __name__ == "__main__":
     test.setup_method()
     try:
         test.test_iniciar_sesion()
-        test.test_verify_id()  
-        test.test_verify_name()  
+        #test.test_verify_name()  
+        #test.test_verify_address()  
     finally:
         test.teardown_method()

@@ -54,7 +54,8 @@ class TestSucursales:
         time.sleep(0.5)
 
         #Guardar
-
+        self.driver.find_element(By.XPATH, "//button[contains(text(), 'Registrar')]").click()
+        time.sleep(4)
         actual = self.driver.find_element(By.XPATH, "//tbody//tr//td[text()='Buenos airess']").text
         esperado = "Buenos aires"
         print("-VALOR ACTUAL=", actual,"-VALOR ESPERADO=",esperado)

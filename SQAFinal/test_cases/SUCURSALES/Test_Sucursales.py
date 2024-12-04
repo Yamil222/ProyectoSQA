@@ -54,7 +54,7 @@ class TestSucursales:
         time.sleep(0.5)
 
         #Guardar
-        self.driver.find_element(By.XPATH, "//button[contains(text(), 'Registrar')]").click()
+        self.driver.find_element(By.XPATH, "//div[@id='editar_sucursal_1']//child::button[contains(text(), 'Guardar')]").click()
         time.sleep(4)
         actual = self.driver.find_element(By.XPATH, "//tbody//tr//td[text()='Buenos airess']").text
         esperado = "Buenos aires"
